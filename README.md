@@ -47,6 +47,10 @@ Ou abra `CRC/CRC.xcodeproj` no Xcode e rode o scheme `CRC`. O app vive na barra 
 
 Novos comandos = nova entrada no dicionário `bindings` do `CommandDispatcher`.
 
+## Por que só macOS?
+
+Por escolha, não por limitação: cada camada usa o framework nativo da Apple (Vision para os 21 pontos, AVFoundation para captura, SwiftUI/glassEffect para a UI, AppleScript para os comandos), o que dispensa Python, MediaPipe e qualquer modelo externo. Um port para Linux/Windows seria outro projeto — mas as heurísticas de gesto e o One Euro Filter são matemática pura e portam direto, e o layout dos 21 pontos é o mesmo do MediaPipe.
+
 ## Qualidade de tracking
 
 `analyze_tracking.py` é uma ferramenta offline (Python, só para desenvolvimento — o app não depende dela) que analisa gravações do MetricsRecorder: jitter, latência do filtro, teleportes e histerese da pinça.
