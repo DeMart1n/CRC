@@ -26,7 +26,8 @@ A janela de preview mostra o esqueleto das mãos e uma lente **Liquid Glass** (g
 ## Requisitos
 
 - macOS 26.0+
-- Permissão de câmera
+- Xcode 26 (SDK do macOS 26 — o `glassEffect` não compila em versões anteriores)
+- Permissão de câmera (o sistema pede na primeira execução)
 
 ## Build
 
